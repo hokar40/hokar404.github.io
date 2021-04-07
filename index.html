@@ -101,14 +101,7 @@
     <td width="100%">
 <script language="JavaScript">
  
-/*
- BY LIZER
- (http://www.javascriptkit.com)
- http://www.star28.com/ 
-دا معرف وقت 
-*/
-/*//-->BY LIZER*/
- 
+
 if (document.all||document.getElementById)
 document.write('<span id="worldclock" style="font:bold 16px Arial;"></span><br>')
  
@@ -120,7 +113,7 @@ function updateclock(z){
 zone=z.options[z.selectedIndex].value;
 isitlocal=(z.options[0].selected)?true:false;
 }
-/*//-->BY LIZER*/
+
  
 function WorldClock(){
 now=new Date();
@@ -135,16 +128,16 @@ if (hr < 0) hr+=24;
 if (hr > 23) hr-=24;
 ampm = (hr > 11)?"PM":"AM";
 statusampm = ampm.toLowerCase();
-/*//-->BY LIZER*/
- 
+
+  
 hr2 = hr;
 if (hr2 == 0) hr2=12;
 (hr2 < 13)?hr2:hr2 %= 12;
 if (hr2<10) hr2="0"+hr2
-/*//-->BY LIZER*/
+
  
 var finaltime=hr2+':'+((mins < 10)?"0"+mins:mins)+':'+((secs < 10)?"0"+secs:secs)+' '+statusampm;
-/*//-->BY LIZER*/
+
  
 if (document.all)
 worldclock.innerHTML=finaltime
@@ -155,13 +148,12 @@ document.worldclockns.document.worldclockns2.document.write(finaltime)
 document.worldclockns.document.worldclockns2.document.close()
 }
  
-/*//-->BY LIZER*/
+
  
 setTimeout('WorldClock()',1000);
 }
  
 window.onload=WorldClock
-//-->BY LIZER
 </script>
 <!--Place holder for NS4 only-->
 <ilayer id="worldclockns" width=100% height=35><layer id="worldclockns2" width=100% height=35 left=0 top=0 style="font:bold 16px Arial;"></layer></ilayer>
